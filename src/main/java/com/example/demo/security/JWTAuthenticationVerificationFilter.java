@@ -7,7 +7,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -22,7 +21,6 @@ import static com.example.demo.security.SecurityConstant.TOKEN_PREFIX;
 import static java.util.Collections.emptyList;
 import static org.slf4j.LoggerFactory.getLogger;
 
-@Component
 public class JWTAuthenticationVerificationFilter extends BasicAuthenticationFilter {
 
     private final Logger logger = getLogger(JWTAuthenticationVerificationFilter.class);

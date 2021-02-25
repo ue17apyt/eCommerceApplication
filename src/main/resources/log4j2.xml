@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="INFO">
+
+    <Appenders>
+        <Console name="eCommerceConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5p %C{7} - Line %L - %m %n"/>
+        </Console>
+        <File name="eCommerceFile" fileName="logs/eCommerce.log">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5p %C{7} - Line %L - %m %n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.example.demo" level="INFO" additivity="false">
+            <AppenderRef ref="eCommerceFile"/>
+            <AppenderRef ref="eCommerceConsole"/>
+        </Logger>
+        <Logger name="org.springframework.boot" level="ERROR" additivity="false">
+            <AppenderRef ref="eCommerceFile"/>
+            <AppenderRef ref="eCommerceConsole"/>
+        </Logger>
+        <Root level="ERROR">
+            <AppenderRef ref="eCommerceFile"/>
+            <AppenderRef ref="eCommerceConsole"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
