@@ -17,8 +17,10 @@
             <AppenderRef ref="eCommerceConsole"/>
         </Logger>
         <Logger name="org.springframework.boot" level="ERROR" additivity="false">
-            <AppenderRef ref="eCommerceFile"/>
             <AppenderRef ref="eCommerceConsole"/>
+        </Logger>
+        <Logger name="org.springframework.boot" level="INFO" additivity="false">
+            <AppenderRef ref="eCommerceFile"/>
         </Logger>
         <Root level="ERROR">
             <AppenderRef ref="eCommerceFile"/>

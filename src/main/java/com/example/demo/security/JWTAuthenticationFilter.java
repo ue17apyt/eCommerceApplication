@@ -65,7 +65,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         response.addHeader(HEADER_STRING, TOKEN_PREFIX + token);
         this.logger.info(
                 "User {} is authenticated and JSON Web Token is issued",
-                ((User) authentication.getPrincipal()).getUsername()
+                ((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername()
         );
     }
 
