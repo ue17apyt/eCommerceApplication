@@ -1,0 +1,60 @@
+2021-03-02 23:11:04,489 [main] INFO  org.springframework.boot.StartupInfoLogger - Line 55 - Starting SareetaApplication using Java 1.8.0_281 on DESKTOP-DQV7E9I with PID 8100 (C:\Users\Einsamer_Hirte\IdeaProjects\eCommerceApplication\target\classes started by Einsamer_Hirte in C:\Users\Einsamer_Hirte\IdeaProjects\eCommerceApplication) 
+2021-03-02 23:11:04,498 [main] INFO  org.springframework.boot.SpringApplication - Line 660 - No active profile set, falling back to default profiles: default 
+2021-03-02 23:11:05,957 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Line 108 - Tomcat initialized with port(s): 8086 (http) 
+2021-03-02 23:11:06,089 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Line 289 - Root WebApplicationContext: initialization completed in 1490 ms 
+2021-03-02 23:11:07,750 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - Line 221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2021-03-02 23:11:08,296 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Line 220 - Tomcat started on port(s): 8086 (http) with context path '' 
+2021-03-02 23:11:08,302 [main] INFO  org.springframework.boot.StartupInfoLogger - Line 61 - Started SareetaApplication in 4.123 seconds (JVM running for 4.827) 
+2021-03-02 23:11:15,583 [http-nio-8086-exec-1] INFO  com.example.demo.controllers.UserController - Line 67 - TASK: Create a user 
+2021-03-02 23:11:15,584 [http-nio-8086-exec-1] INFO  com.example.demo.controllers.UserController - Line 70 - STEP: Username is set with Don Quijote de la Mancha 
+2021-03-02 23:11:15,622 [http-nio-8086-exec-1] ERROR com.example.demo.controllers.UserController - Line 77 - ERROR: Non-compliant password. Failure to create user Don Quijote de la Mancha. 
+2021-03-02 23:11:19,045 [http-nio-8086-exec-3] INFO  com.example.demo.controllers.UserController - Line 67 - TASK: Create a user 
+2021-03-02 23:11:19,046 [http-nio-8086-exec-3] INFO  com.example.demo.controllers.UserController - Line 70 - STEP: Username is set with Don Quijote de la Mancha 
+2021-03-02 23:11:19,047 [http-nio-8086-exec-3] ERROR com.example.demo.controllers.UserController - Line 77 - ERROR: Non-compliant password. Failure to create user Don Quijote de la Mancha. 
+2021-03-02 23:11:31,713 [http-nio-8086-exec-6] INFO  com.example.demo.controllers.UserController - Line 67 - TASK: Create a user 
+2021-03-02 23:11:31,713 [http-nio-8086-exec-6] INFO  com.example.demo.controllers.UserController - Line 70 - STEP: Username is set with Don Quijote de la Mancha 
+2021-03-02 23:11:31,780 [http-nio-8086-exec-6] INFO  com.example.demo.controllers.UserController - Line 83 - COMPLETION: Create user Don Quijote de la Mancha successfully. 
+2021-03-02 23:11:34,552 [http-nio-8086-exec-7] INFO  com.example.demo.controllers.UserController - Line 67 - TASK: Create a user 
+2021-03-02 23:11:34,552 [http-nio-8086-exec-7] INFO  com.example.demo.controllers.UserController - Line 70 - STEP: Username is set with Miserables 
+2021-03-02 23:11:34,611 [http-nio-8086-exec-7] INFO  com.example.demo.controllers.UserController - Line 83 - COMPLETION: Create user Miserables successfully. 
+2021-03-02 23:11:39,025 [http-nio-8086-exec-8] INFO  com.example.demo.security.JWTAuthenticationFilter - Line 43 - Attempt authentication for user LesMiserables 
+2021-03-02 23:11:42,571 [http-nio-8086-exec-9] INFO  com.example.demo.security.JWTAuthenticationFilter - Line 43 - Attempt authentication for user Miserables 
+2021-03-02 23:11:51,881 [http-nio-8086-exec-10] INFO  com.example.demo.security.JWTAuthenticationFilter - Line 43 - Attempt authentication for user Miserables 
+2021-03-02 23:11:52,185 [http-nio-8086-exec-10] INFO  com.example.demo.security.JWTAuthenticationFilter - Line 66 - User Miserables is authenticated and JSON Web Token is issued 
+2021-03-02 23:12:40,953 [http-nio-8086-exec-5] INFO  com.example.demo.security.JWTAuthenticationFilter - Line 43 - Attempt authentication for user Miserables 
+2021-03-02 23:12:41,018 [http-nio-8086-exec-5] INFO  com.example.demo.security.JWTAuthenticationFilter - Line 66 - User Miserables is authenticated and JSON Web Token is issued 
+2021-03-02 23:13:08,259 [http-nio-8086-exec-1] INFO  com.example.demo.controllers.UserController - Line 55 - TASK: Find user by a specified username Miserables 
+2021-03-02 23:13:08,261 [http-nio-8086-exec-1] INFO  com.example.demo.controllers.UserController - Line 61 - COMPLETION: Find user Miserables successfully. 
+2021-03-02 23:13:22,510 [http-nio-8086-exec-4] INFO  com.example.demo.controllers.UserController - Line 43 - TASK: Find user by a specified ID 2 
+2021-03-02 23:13:22,518 [http-nio-8086-exec-4] INFO  com.example.demo.controllers.UserController - Line 49 - COMPLETION: Find user 2 successfully. 
+2021-03-02 23:13:36,505 [http-nio-8086-exec-3] INFO  com.example.demo.controllers.CartController - Line 43 - TASK: Add 3 item(s) 1 to cart for a specified user Miserables 
+2021-03-02 23:13:36,524 [http-nio-8086-exec-3] INFO  com.example.demo.controllers.CartController - Line 60 - COMPLETION: Add 3 item(s) 3 to cart for user Miserables successfully. 
+2021-03-02 23:14:14,446 [http-nio-8086-exec-2] INFO  com.example.demo.controllers.CartController - Line 43 - TASK: Add 7 item(s) 2 to cart for a specified user Miserables 
+2021-03-02 23:14:14,451 [http-nio-8086-exec-2] INFO  com.example.demo.controllers.CartController - Line 60 - COMPLETION: Add 7 item(s) 7 to cart for user Miserables successfully. 
+2021-03-02 23:14:30,069 [http-nio-8086-exec-6] INFO  com.example.demo.controllers.CartController - Line 43 - TASK: Add 5 item(s) 3 to cart for a specified user Miserables 
+2021-03-02 23:14:30,072 [http-nio-8086-exec-6] ERROR com.example.demo.controllers.CartController - Line 54 - ERROR: Item(s) 3 is not found. Failure to add the item(s). 
+2021-03-02 23:14:59,744 [http-nio-8086-exec-7] INFO  com.example.demo.controllers.CartController - Line 43 - TASK: Add 5 item(s) 1 to cart for a specified user Notre-Dame de Paris 
+2021-03-02 23:14:59,745 [http-nio-8086-exec-7] ERROR com.example.demo.controllers.CartController - Line 49 - ERROR: User Notre-Dame de Paris is not found. Failure to add item(s) to cart. 
+2021-03-02 23:15:22,193 [http-nio-8086-exec-8] INFO  com.example.demo.controllers.CartController - Line 69 - TASK: Remove 2 item(s) 2 from cart for a specified user Miserables 
+2021-03-02 23:15:22,199 [http-nio-8086-exec-8] INFO  com.example.demo.controllers.CartController - Line 86 - COMPLETION: Remove 2 item(s) 2 from cart for user Miserables successfully. 
+2021-03-02 23:15:37,460 [http-nio-8086-exec-9] INFO  com.example.demo.controllers.CartController - Line 69 - TASK: Remove 3 item(s) 3 from cart for a specified user Miserables 
+2021-03-02 23:15:37,463 [http-nio-8086-exec-9] ERROR com.example.demo.controllers.CartController - Line 80 - ERROR: Item(s) 3 is not found. Failure to remove the item. 
+2021-03-02 23:15:52,465 [http-nio-8086-exec-10] INFO  com.example.demo.controllers.CartController - Line 69 - TASK: Remove 3 item(s) 1 from cart for a specified user Notre-Dame de Paris 
+2021-03-02 23:15:52,466 [http-nio-8086-exec-10] ERROR com.example.demo.controllers.CartController - Line 75 - ERROR: User Notre-Dame de Paris is not found. Failure to remove items from cart. 
+2021-03-02 23:16:03,447 [http-nio-8086-exec-5] INFO  com.example.demo.controllers.ItemController - Line 37 - TASK: Get item by a specified ID 1 
+2021-03-02 23:16:03,449 [http-nio-8086-exec-5] INFO  com.example.demo.controllers.ItemController - Line 43 - COMPLETION: Get item 1 successfully. 
+2021-03-02 23:16:12,333 [http-nio-8086-exec-1] INFO  com.example.demo.controllers.ItemController - Line 37 - TASK: Get item by a specified ID 3 
+2021-03-02 23:16:12,334 [http-nio-8086-exec-1] ERROR com.example.demo.controllers.ItemController - Line 40 - ERROR: Item 3 is not found. Failure to get the item. 
+2021-03-02 23:16:21,794 [http-nio-8086-exec-4] INFO  com.example.demo.controllers.ItemController - Line 49 - TASK: Get all items by a specified name Round Widget 
+2021-03-02 23:16:21,797 [http-nio-8086-exec-4] INFO  com.example.demo.controllers.ItemController - Line 55 - COMPLETION: Get all items by name Round Widget successfully. 
+2021-03-02 23:16:35,578 [http-nio-8086-exec-3] INFO  com.example.demo.controllers.ItemController - Line 49 - TASK: Get all items by a specified name Round 
+2021-03-02 23:16:35,579 [http-nio-8086-exec-3] ERROR com.example.demo.controllers.ItemController - Line 52 - ERROR: Items are not found by name Round. Failure to get the item. 
+2021-03-02 23:16:46,290 [http-nio-8086-exec-2] INFO  com.example.demo.controllers.ItemController - Line 31 - TASK: Get all items 
+2021-03-02 23:16:59,123 [http-nio-8086-exec-6] INFO  com.example.demo.controllers.OrderController - Line 36 - TASK: Submit order for a specified username Miserables 
+2021-03-02 23:16:59,130 [http-nio-8086-exec-6] INFO  com.example.demo.controllers.OrderController - Line 44 - COMPLETION: Submit order for user Miserables successfully. 
+2021-03-02 23:17:10,507 [http-nio-8086-exec-7] INFO  com.example.demo.controllers.OrderController - Line 36 - TASK: Submit order for a specified username LesMiserables 
+2021-03-02 23:17:10,507 [http-nio-8086-exec-7] ERROR com.example.demo.controllers.OrderController - Line 39 - ERROR: User LesMiserables is not found. Failure to submit order. 
+2021-03-02 23:17:18,984 [http-nio-8086-exec-8] INFO  com.example.demo.controllers.OrderController - Line 50 - TASK: Get order list for a specified username Miserables 
+2021-03-02 23:17:18,985 [http-nio-8086-exec-8] INFO  com.example.demo.controllers.OrderController - Line 56 - COMPLETION: Get order list for user Miserables successfully 
+2021-03-02 23:17:34,134 [http-nio-8086-exec-9] INFO  com.example.demo.controllers.OrderController - Line 50 - TASK: Get order list for a specified username LesMiserables 
+2021-03-02 23:17:34,135 [http-nio-8086-exec-9] ERROR com.example.demo.controllers.OrderController - Line 53 - ERROR: User LesMiserables is not found. Failure to get order list. 

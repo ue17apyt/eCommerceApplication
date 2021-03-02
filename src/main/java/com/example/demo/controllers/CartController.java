@@ -40,27 +40,36 @@ public class CartController {
 
     @PostMapping("/addToCart")
     public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
-        this.logger.info("TASK: Add items to cart for a specified user");
+        this.logger.info(
+                "TASK: Add {} item(s) {} to cart for a specified user {}",
+                request.getQuantity(), request.getItemId(), request.getUsername()
+        );
         User user = this.userRepository.findByUsername(request.getUsername());
         if (user == null) {
-            this.logger.error("ERROR: User {} is not found. Failure to add items to cart.", request.getUsername());
+            this.logger.error("ERROR: User {} is not found. Failure to add item(s) to cart.", request.getUsername());
             return status(NOT_FOUND).build();
         }
         Optional<Item> item = this.itemRepository.findById(request.getItemId());
         if (!item.isPresent()) {
-            this.logger.error("ERROR: Item {} is not found. Failure to add the item.", request.getItemId());
+            this.logger.error("ERROR: Item(s) {} is not found. Failure to add the item(s).", request.getItemId());
             return status(NOT_FOUND).build();
         }
         Cart cart = user.getCart();
         IntStream.range(0, request.getQuantity()).forEach(i -> cart.addItem(item.get()));
         this.cartRepository.save(cart);
-        this.logger.info("COMPLETION: Add items to cart for user {} successfully.", request.getUsername());
+        this.logger.info(
+                "COMPLETION: Add {} item(s) {} to cart for user {} successfully.",
+                request.getQuantity(), request.getQuantity(), request.getUsername()
+        );
         return ok(cart);
     }
 
     @PostMapping("/removeFromCart")
     public ResponseEntity<Cart> removeFromCart(@RequestBody ModifyCartRequest request) {
-        this.logger.info("TASK: Remove items from cart for a specified user");
+        this.logger.info(
+                "TASK: Remove {} item(s) {} from cart for a specified user {}",
+                request.getQuantity(), request.getItemId(), request.getUsername()
+        );
         User user = this.userRepository.findByUsername(request.getUsername());
         if (user == null) {
             this.logger.error("ERROR: User {} is not found. Failure to remove items from cart.", request.getUsername());
@@ -68,13 +77,16 @@ public class CartController {
         }
         Optional<Item> item = this.itemRepository.findById(request.getItemId());
         if (!item.isPresent()) {
-            this.logger.error("ERROR: Item {} is not found. Failure to remove the item.", request.getItemId());
+            this.logger.error("ERROR: Item(s) {} is not found. Failure to remove the item.", request.getItemId());
             return status(NOT_FOUND).build();
         }
         Cart cart = user.getCart();
         IntStream.range(0, request.getQuantity()).forEach(i -> cart.removeItem(item.get()));
         this.cartRepository.save(cart);
-        this.logger.info("COMPLETION: Remove items from cart for user {} successfully.", request.getUsername());
+        this.logger.info(
+                "COMPLETION: Remove {} item(s) {} from cart for user {} successfully.",
+                request.getQuantity(), request.getQuantity(), request.getUsername()
+        );
         return ok(cart);
     }
 

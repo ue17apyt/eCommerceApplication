@@ -34,7 +34,7 @@ public class ItemController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Item> getItemById(@PathVariable Long id) {
-        this.logger.info("TASK: Get item by a specified ID");
+        this.logger.info("TASK: Get item by a specified ID " + id);
         Optional<Item> optionalItem = this.itemRepository.findById(id);
         if (!optionalItem.isPresent()) {
             this.logger.error("ERROR: Item {} is not found. Failure to get the item.", id);
@@ -46,7 +46,7 @@ public class ItemController {
 
     @GetMapping("/name/{name}")
     public ResponseEntity<List<Item>> getItemsByName(@PathVariable String name) {
-        this.logger.info("TASK: Get all items by a specified name");
+        this.logger.info("TASK: Get all items by a specified name " + name);
         List<Item> items = this.itemRepository.findByName(name);
         if (items == null || items.isEmpty()) {
             this.logger.error("ERROR: Items are not found by name {}. Failure to get the item.", name);

@@ -40,7 +40,7 @@ public class UserController {
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
-        this.logger.info("TASK: Find user by a specified ID");
+        this.logger.info("TASK: Find user by a specified ID " + id);
         Optional<User> optionalUser = this.userRepository.findById(id);
         if (!optionalUser.isPresent()) {
             this.logger.error("ERROR: User {} is not found. Failure to find the user.", id);
@@ -52,7 +52,7 @@ public class UserController {
 
     @GetMapping("/{username}")
     public ResponseEntity<User> findByUserName(@PathVariable String username) {
-        this.logger.info("TASK: Find user by a specified username");
+        this.logger.info("TASK: Find user by a specified username " + username);
         User user = this.userRepository.findByUsername(username);
         if (user == null) {
             this.logger.error("ERROR: User {} is not found. Failure to find the user.", username);

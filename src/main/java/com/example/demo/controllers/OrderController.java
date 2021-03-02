@@ -33,7 +33,7 @@ public class OrderController {
 
     @PostMapping("/submit/{username}")
     public ResponseEntity<UserOrder> submit(@PathVariable String username) {
-        this.logger.info("TASK: Submit order for a specified username");
+        this.logger.info("TASK: Submit order for a specified username " + username);
         User user = this.userRepository.findByUsername(username);
         if (user == null) {
             this.logger.error("ERROR: User {} is not found. Failure to submit order.", username);
@@ -47,7 +47,7 @@ public class OrderController {
 
     @GetMapping("/history/{username}")
     public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
-        this.logger.info("TASK: Get order list for a specified username");
+        this.logger.info("TASK: Get order list for a specified username " + username);
         User user = this.userRepository.findByUsername(username);
         if (user == null) {
             this.logger.error("ERROR: User {} is not found. Failure to get order list.", username);
