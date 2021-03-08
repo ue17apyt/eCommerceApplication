@@ -1,0 +1,167 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/eCommerceProject
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential 3d5d1949-dc64-41e2-88de-bd592fa631f0
+Cloning the remote Git repository
+Cloning repository git@github.com:ue17apyt/eCommerceApplication.git
+ > git init /var/jenkins_home/workspace/eCommerceProject # timeout=10
+Fetching upstream changes from git@github.com:ue17apyt/eCommerceApplication.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.26.2'
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:ue17apyt/eCommerceApplication.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:ue17apyt/eCommerceApplication.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 301393f2363827bd19c7032ca01b9b1f25b46be1 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 301393f2363827bd19c7032ca01b9b1f25b46be1 # timeout=10
+Commit message: "Changed pom file"
+ > git rev-list --no-walk 301393f2363827bd19c7032ca01b9b1f25b46be1 # timeout=10
+[eCommerceProject] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3/bin/mvn -f pom.xml clean compile package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ auth-course ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/eCommerceProject/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/eCommerceProject/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/eCommerceProject/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /var/jenkins_home/workspace/eCommerceProject/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.SareetaApplicationTests
+2021-03-08 19:27:33,907 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-03-08 19:27:34,034 [main] INFO  org.springframework.boot.StartupInfoLogger - Line 55 - Starting SareetaApplicationTests using Java 1.8.0_282 on 2b61e54587d1 with PID 2738 (started by root in /var/jenkins_home/workspace/eCommerceProject) 
+2021-03-08 19:27:34,055 [main] INFO  org.springframework.boot.SpringApplication - Line 660 - No active profile set, falling back to default profiles: default 
+2021-03-08 19:27:39,188 [main] INFO  org.springframework.boot.StartupInfoLogger - Line 61 - Started SareetaApplicationTests in 5.425 seconds (JVM running for 6.924) 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.352 s - in com.example.demo.SareetaApplicationTests
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+2021-03-08 19:27:39,530 [main] INFO  com.example.demo.controllers.OrderController - Line 36 - TASK: Submit order for a specified username testUsername 
+2021-03-08 19:27:39,535 [main] INFO  com.example.demo.controllers.OrderController - Line 44 - COMPLETION: Submit order for user testUsername successfully. 
+2021-03-08 19:27:39,545 [main] INFO  com.example.demo.controllers.OrderController - Line 36 - TASK: Submit order for a specified username anotherUsername 
+2021-03-08 19:27:39,546 [main] ERROR com.example.demo.controllers.OrderController - Line 39 - ERROR: User anotherUsername is not found. Failure to submit order. 
+2021-03-08 19:27:39,551 [main] INFO  com.example.demo.controllers.OrderController - Line 50 - TASK: Get order list for a specified username anotherUsername 
+2021-03-08 19:27:39,552 [main] ERROR com.example.demo.controllers.OrderController - Line 53 - ERROR: User anotherUsername is not found. Failure to get order list. 
+2021-03-08 19:27:39,563 [main] INFO  com.example.demo.controllers.OrderController - Line 36 - TASK: Submit order for a specified username testUsername 
+2021-03-08 19:27:39,563 [main] INFO  com.example.demo.controllers.OrderController - Line 44 - COMPLETION: Submit order for user testUsername successfully. 
+2021-03-08 19:27:39,563 [main] INFO  com.example.demo.controllers.OrderController - Line 36 - TASK: Submit order for a specified username testUsername 
+2021-03-08 19:27:39,564 [main] INFO  com.example.demo.controllers.OrderController - Line 44 - COMPLETION: Submit order for user testUsername successfully. 
+2021-03-08 19:27:39,564 [main] INFO  com.example.demo.controllers.OrderController - Line 50 - TASK: Get order list for a specified username testUsername 
+2021-03-08 19:27:39,564 [main] INFO  com.example.demo.controllers.OrderController - Line 56 - COMPLETION: Get order list for user testUsername successfully 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.212 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+2021-03-08 19:27:39,622 [main] INFO  com.example.demo.controllers.UserController - Line 43 - TASK: Find user by a specified ID 1 
+2021-03-08 19:27:39,623 [main] INFO  com.example.demo.controllers.UserController - Line 49 - COMPLETION: Find user 1 successfully. 
+2021-03-08 19:27:39,625 [main] INFO  com.example.demo.controllers.UserController - Line 55 - TASK: Find user by a specified username testUsername 
+2021-03-08 19:27:39,625 [main] INFO  com.example.demo.controllers.UserController - Line 61 - COMPLETION: Find user testUsername successfully. 
+2021-03-08 19:27:39,630 [main] INFO  com.example.demo.controllers.UserController - Line 55 - TASK: Find user by a specified username anotherUsername 
+2021-03-08 19:27:39,631 [main] ERROR com.example.demo.controllers.UserController - Line 58 - ERROR: User anotherUsername is not found. Failure to find the user. 
+2021-03-08 19:27:39,646 [main] INFO  com.example.demo.controllers.UserController - Line 67 - TASK: Create a user 
+2021-03-08 19:27:39,647 [main] INFO  com.example.demo.controllers.UserController - Line 70 - STEP: Username is set with testUsername 
+2021-03-08 19:27:39,647 [main] ERROR com.example.demo.controllers.UserController - Line 77 - ERROR: Non-compliant password. Failure to create user testUsername. 
+2021-03-08 19:27:39,653 [main] INFO  com.example.demo.controllers.UserController - Line 67 - TASK: Create a user 
+2021-03-08 19:27:39,653 [main] INFO  com.example.demo.controllers.UserController - Line 70 - STEP: Username is set with testUsername 
+2021-03-08 19:27:39,653 [main] INFO  com.example.demo.controllers.UserController - Line 83 - COMPLETION: Create user testUsername successfully. 
+2021-03-08 19:27:39,665 [main] INFO  com.example.demo.controllers.UserController - Line 67 - TASK: Create a user 
+2021-03-08 19:27:39,665 [main] INFO  com.example.demo.controllers.UserController - Line 70 - STEP: Username is set with testUsername 
+2021-03-08 19:27:39,665 [main] ERROR com.example.demo.controllers.UserController - Line 77 - ERROR: Non-compliant password. Failure to create user testUsername. 
+2021-03-08 19:27:39,668 [main] INFO  com.example.demo.controllers.UserController - Line 43 - TASK: Find user by a specified ID 2 
+2021-03-08 19:27:39,668 [main] ERROR com.example.demo.controllers.UserController - Line 46 - ERROR: User 2 is not found. Failure to find the user. 
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.controllers.CartControllerTest
+2021-03-08 19:27:39,737 [main] INFO  com.example.demo.controllers.CartController - Line 69 - TASK: Remove 1 item(s) 2 from cart for a specified user anotherUsername 
+2021-03-08 19:27:39,737 [main] ERROR com.example.demo.controllers.CartController - Line 75 - ERROR: User anotherUsername is not found. Failure to remove items from cart. 
+2021-03-08 19:27:39,742 [main] INFO  com.example.demo.controllers.CartController - Line 43 - TASK: Add 1 item(s) 2 to cart for a specified user anotherUsername 
+2021-03-08 19:27:39,743 [main] ERROR com.example.demo.controllers.CartController - Line 49 - ERROR: User anotherUsername is not found. Failure to add item(s) to cart. 
+2021-03-08 19:27:39,746 [main] INFO  com.example.demo.controllers.CartController - Line 69 - TASK: Remove 1 item(s) 2 from cart for a specified user testUser 
+2021-03-08 19:27:39,748 [main] INFO  com.example.demo.controllers.CartController - Line 86 - COMPLETION: Remove 1 item(s) 1 from cart for user testUser successfully. 
+2021-03-08 19:27:39,753 [main] INFO  com.example.demo.controllers.CartController - Line 43 - TASK: Add 1 item(s) 2 to cart for a specified user testUser 
+2021-03-08 19:27:39,754 [main] INFO  com.example.demo.controllers.CartController - Line 60 - COMPLETION: Add 1 item(s) 1 to cart for user testUser successfully. 
+2021-03-08 19:27:39,758 [main] INFO  com.example.demo.controllers.CartController - Line 69 - TASK: Remove 1 item(s) 3 from cart for a specified user testUser 
+2021-03-08 19:27:39,758 [main] ERROR com.example.demo.controllers.CartController - Line 80 - ERROR: Item(s) 3 is not found. Failure to remove the item. 
+2021-03-08 19:27:39,761 [main] INFO  com.example.demo.controllers.CartController - Line 43 - TASK: Add 1 item(s) 3 to cart for a specified user testUser 
+2021-03-08 19:27:39,761 [main] ERROR com.example.demo.controllers.CartController - Line 54 - ERROR: Item(s) 3 is not found. Failure to add the item(s). 
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s - in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+2021-03-08 19:27:39,765 [main] INFO  com.example.demo.controllers.ItemController - Line 37 - TASK: Get item by a specified ID 3 
+2021-03-08 19:27:39,766 [main] ERROR com.example.demo.controllers.ItemController - Line 40 - ERROR: Item 3 is not found. Failure to get the item. 
+2021-03-08 19:27:39,769 [main] INFO  com.example.demo.controllers.ItemController - Line 31 - TASK: Get all items 
+2021-03-08 19:27:39,772 [main] INFO  com.example.demo.controllers.ItemController - Line 49 - TASK: Get all items by a specified name AnotherItems 
+2021-03-08 19:27:39,773 [main] ERROR com.example.demo.controllers.ItemController - Line 52 - ERROR: Items are not found by name AnotherItems. Failure to get the item. 
+2021-03-08 19:27:39,775 [main] INFO  com.example.demo.controllers.ItemController - Line 49 - TASK: Get all items by a specified name Items 
+2021-03-08 19:27:39,775 [main] INFO  com.example.demo.controllers.ItemController - Line 55 - COMPLETION: Get all items by name Items successfully. 
+2021-03-08 19:27:39,779 [main] INFO  com.example.demo.controllers.ItemController - Line 37 - TASK: Get item by a specified ID 1 
+2021-03-08 19:27:39,780 [main] INFO  com.example.demo.controllers.ItemController - Line 43 - COMPLETION: Get item 1 successfully. 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.3.1:war (default-war) @ auth-course ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [/var/jenkins_home/workspace/eCommerceProject/target/auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Building war: /var/jenkins_home/workspace/eCommerceProject/target/auth-course-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.3:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.320 s
+[INFO] Finished at: 2021-03-08T19:27:42Z
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/jenkins_home/workspace/eCommerceProject/target/auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context myApp
+  Redeploying [/var/jenkins_home/workspace/eCommerceProject/target/auth-course-0.0.1-SNAPSHOT.war]
+  Undeploying [/var/jenkins_home/workspace/eCommerceProject/target/auth-course-0.0.1-SNAPSHOT.war]
+  Deploying [/var/jenkins_home/workspace/eCommerceProject/target/auth-course-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS
